@@ -1,95 +1,268 @@
--- TABLAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-DROP TABLE Cliente;
-DROP TABLE Pyme;
-DROP TABLE Producto;
-DROP TABLE Categoria;
-DROP TABLE Orden;
-DROP TABLE Linea_de_producto;
-DROP TABLE Registro;
+-- ============================================================================
 
-CREATE TABLE Cliente (
-    cliente_id NUMBER,
-    cedula      VARCHAR2(12),
-    nombre_cliente      VARCHAR2(45),
-    apodo   VARCHAR2(25),
-    apellido1   VARCHAR2(25),
-    apellido2   VARCHAR2(25),
-    telefono_cliente    VARCHAR2(15),
-    contraseña    RAW(50),
-    provincia_cliente    VARCHAR2(20),
-    PRIMARY KEY ( cliente_id )
-);
+--                                 CRUD
 
-CREATE TABLE Pyme (
-    pyme_id         NUMBER,
-    cedula_juridica      VARCHAR2(12),
-    nombre_pyme      VARCHAR2(45),
-    email           VARCHAR2(85),
-    telefono_pyme    VARCHAR2(15),
-    clave    RAW(50),
-    provincia_pyme    VARCHAR2(20),
-    PRIMARY KEY ( pyme_id )
-);
+-- ============================================================================
+--                                 ORDEN
+-- ============================================================================
 
-CREATE TABLE Categoria (
-    categoria_id NUMBER,
-    nombre_categoria      VARCHAR2(100),
-    PRIMARY KEY ( categoria_id )
-);
+create or replace procedure orden_insert (
+new_orden_id NUMBER,
+new_monto_total NUMBER,
+new_estado   NUMBER,
+new_fecha_orden   DATE,
+new_cliente_id   NUMBER
+) AS
 
-CREATE TABLE Producto (
-    producto_id NUMBER,
-    nombre_producto      VARCHAR2(55),
-    descripcion   VARCHAR2(255),
-    precio_unitario   NUMBER(10,2),
-    categoria_id    NUMBER,
-    pyme_id     NUMBER,
-    PRIMARY KEY ( producto_id ),
-    CONSTRAINT fk_categoria_producto
-        FOREIGN KEY (categoria_id)
-        REFERENCES Categoria (categoria_id),
-    CONSTRAINT fk_pyme_producto
-        FOREIGN KEY (pyme_id)
-        REFERENCES Pyme (pyme_id)
-);
+begin
+    insert into Orden(orden_id, monto_total, estado, fecha_orden, cliente_id) values (new_orden_id, new_monto_total, new_estado, new_fecha_orden, new_cliente_id);
+end;
+/
 
-CREATE TABLE Registro (
-    registro_id NUMBER,
-    monto_anterior      NUMBER(10,2),
-    fecha_registro   DATE,
-    producto_id   NUMBER,
-    PRIMARY KEY ( registro_id ),
-    CONSTRAINT fk_producto_registro
-        FOREIGN KEY (producto_id)
-        REFERENCES Producto (producto_id)
-);
+create or replace procedure orden_update (
+new_orden_id NUMBER,
+new_monto_total NUMBER,
+new_estado   NUMBER,
+new_fecha_orden   DATE,
+new_cliente_id   NUMBER
+) AS
 
-CREATE TABLE Orden (
-    orden_id NUMBER,
-    monto_total      NUMBER(10,2),
-    estado   NUMBER(1),
-    fecha_orden   DATE,
-    cliente_id   NUMBER,
-    PRIMARY KEY ( orden_id ),
-    CONSTRAINT fk_cliente_orden
-        FOREIGN KEY (cliente_id)
-        REFERENCES Cliente (cliente_id)
-);
+begin
+    update Orden set orden_id = new_orden_id, monto_total = new_monto_total, estado = new_estado, fecha_orden = new_fecha_orden, cliente_id = new_cliente_id;
+end;
+/
 
-CREATE TABLE Linea_de_producto (
-    linea_id NUMBER,
-    cantidad      NUMBER,
-    monto   NUMBER(10,2),
-    orden_id   NUMBER,
-    producto_id   NUMBER,
-    PRIMARY KEY ( orden_id ),
-    CONSTRAINT fk_orden
-        FOREIGN KEY (orden_id)
-        REFERENCES Orden (orden_id),
-    CONSTRAINT fk_producto_linea
-        FOREIGN KEY (producto_id)
-        REFERENCES Producto (producto_id)
-);
+create or replace procedure orden_delete (
+new_orden_id NUMBER
+) AS
+begin
+    delete from Orden where orden_id = new_orden_id;
+end;
+/
+
+-- ============================================================================
+--                                 Cliente
+-- ============================================================================
+create or replace procedure cliente_insert (
+    new_cliente_id NUMBER,
+    new_cedula      VARCHAR2,
+    new_nombre_cliente      VARCHAR2,
+    new_apellido1   VARCHAR2,
+    new_apellido2   VARCHAR2,
+    new_apodo   VARCHAR2,
+    new_telefono_cliente    VARCHAR2,
+    new_contraseña    RAW,
+    new_provincia_cliente    VARCHAR2
+    ) AS
+begin
+    insert into Cliente(cliente_id, cedula, nombre_cliente, apellido1, apellido2, apodo, telefono_cliente, contraseña, provincia_cliente) values (new_cliente_id, new_cedula, new_nombre_cliente, new_apellido1, new_apellido2, new_apodo, new_telefono_cliente, new_contraseña, new_provincia_cliente);
+end;
+/
+
+create or replace procedure cliente_update (
+    new_cliente_id NUMBER,
+    new_cedula      VARCHAR2,
+    new_nombre_cliente      VARCHAR2,
+    new_apellido1   VARCHAR2,
+    new_apellido2   VARCHAR2,
+    new_apodo   VARCHAR2,
+    new_telefono_cliente    VARCHAR2,
+    new_contraseña    RAW,
+    new_provincia_cliente    VARCHAR2
+    ) AS
+begin
+    update Cliente set cliente_id = new_cliente_id, cedula = new_cedula, nombre_cliente = new_nombre_cliente, apellido1 = new_apellido1, apellido2 = new_apellido2, apodo = new_apodo, telefono_cliente = new_telefono_cliente , contraseña = new_contraseña, provincia_cliente = new_provincia_cliente;
+end;
+/
+
+
+create or replace procedure cliente_delete (
+    new_cliente_id NUMBER
+    ) AS
+begin
+    delete from Cliente where cliente_id = new_cliente_id;
+end;
+/
+
+-- ============================================================================
+--                                 Producto
+-- ============================================================================
+create or replace procedure producto_insert (
+    new_producto_id NUMBER,
+    new_nombre_producto      VARCHAR2,
+    new_descripcion   VARCHAR2,
+    new_precio_unitario   NUMBER,
+    new_categoria_id    NUMBER,
+    new_pyme_id     NUMBER
+    ) AS
+
+begin
+    insert into Producto(producto_id, nombre_producto, descripcion, precio_unitario, categoria_id, pyme_id) values (new_producto_id, new_nombre_producto, new_descripcion, new_precio_unitario, new_categoria_id, new_pyme_id);
+end;
+/
+
+create or replace procedure producto_update (
+    new_producto_id NUMBER,
+    new_nombre_producto      VARCHAR2,
+    new_descripcion   VARCHAR2,
+    new_precio_unitario   NUMBER,
+    new_categoria_id    NUMBER,
+    new_pyme_id     NUMBER
+    ) AS
+
+begin
+    update Producto set producto_id = new_producto_id, nombre_producto  = new_nombre_producto, descripcion = new_descripcion, precio_unitario = new_precio_unitario, categoria_id = new_categoria_id, pyme_id = new_pyme_id;
+end;
+/
+
+create or replace procedure delete_producto (
+    new_producto_id NUMBER
+    ) AS
+begin
+    delete from Producto where producto_id = new_producto_id;
+end;
+/
+
+-- ============================================================================
+--                                 Pyme
+-- ============================================================================
+create or replace procedure pyme_insert (
+    new_pyme_id         NUMBER,
+    new_cedula_juridica      VARCHAR2,
+    new_nombre_pyme      VARCHAR2,
+    new_email           VARCHAR2,
+    new_telefono_pyme    VARCHAR2,
+    new_clave    RAW,
+    new_provincia_pyme    VARCHAR2
+    ) AS
+
+begin
+    insert into Pyme(pyme_id, cedula_juridica, nombre_pyme, email, telefono_pyme, clave, provincia_pyme) values (new_pyme_id, new_cedula_juridica, new_nombre_pyme, new_email, new_telefono_pyme, new_clave, new_provincia_pyme);
+end;
+/
+
+create or replace procedure update_pyme (
+    new_pyme_id         NUMBER,
+    new_cedula_juridica      VARCHAR2,
+    new_nombre_pyme      VARCHAR2,
+    new_email           VARCHAR2,
+    new_telefono_pyme    VARCHAR2,
+    new_clave    RAW,
+    new_provincia_pyme    VARCHAR2
+    ) AS
+
+begin
+    update Pyme set pyme_id = new_pyme_id, cedula_juridica = new_cedula_juridica, nombre_pyme = new_nombre_pyme, email = new_email, telefono_pyme = new_telefono_pyme, clave = new_clave, provincia_pyme = new_provincia_pyme;
+end;
+/
+
+create or replace procedure pyme_delete (
+    new_pyme_id         NUMBER
+    ) AS
+begin
+    delete from Pyme where pyme_id = new_pyme_id;
+end;
+/
+
+-- ============================================================================
+--                                 Categoria
+-- ============================================================================
+create or replace procedure categoria_insert  (
+    new_categoria_id NUMBER,
+    new_nombre_categoria      VARCHAR2
+    ) AS
+
+begin
+    insert into Categoria(categoria_id, nombre_categoria) values (new_categoria_id, new_nombre_categoria);
+end;
+/
+
+create or replace procedure categoria_update   (
+    new_categoria_id NUMBER,
+    new_nombre_categoria      VARCHAR2
+    ) AS
+begin
+    update Categoria set categoria_id = new_categoria_id, nombre_categoria = new_nombre_categoria;
+end;
+/
+
+create or replace procedure categoria_delete as
+new_categoria_id number;
+begin
+    delete from Categoria where categoria_id = new_categoria_id;
+end;
+/
+
+-- ============================================================================
+--                                 Linea de producto
+-- ============================================================================
+create or replace procedure linea_de_producto_insert (
+    new_linea_id NUMBER,
+    new_cantidad      NUMBER,
+    new_monto   NUMBER,
+    new_orden_id   NUMBER,
+    new_producto_id   NUMBER
+    ) AS
+
+begin
+    insert into Linea_de_producto(linea_id, cantidad, monto, orden_id, producto_id) values (new_linea_id, new_cantidad, new_monto, new_orden_id, new_producto_id);
+end;
+/
+
+create or replace procedure linea_de_producto_update (
+    new_linea_id NUMBER,
+    new_cantidad      NUMBER,
+    new_monto   NUMBER,
+    new_orden_id   NUMBER,
+    new_producto_id   NUMBER
+    ) AS
+    
+begin
+    update Linea_de_producto set linea_id = new_linea_id, cantidad = new_cantidad, monto = new_monto, orden_id = new_orden_id, producto_id = new_producto_id;
+end;
+/
+
+create or replace procedure linea_de_producto_delete as
+    new_linea_id number;
+begin
+    delete from Linea_de_producto where linea_id = new_linea_id;
+end;
+/
+
+-- ============================================================================
+--                                 Registro
+-- ============================================================================
+create or replace procedure registro_insert (
+    new_registro_id NUMBER,
+    new_monto_anterior      NUMBER,
+    new_fecha_registro   DATE,
+    new_producto_id   NUMBER
+    ) AS
+
+begin
+    insert into Registro(registro_id, monto_anterior, fecha_registro, producto_id) values (new_registro_id, new_monto_anterior, new_fecha_registro, new_producto_id);
+end;
+/
+
+create or replace procedure registro_update (
+    new_registro_id NUMBER,
+    new_monto_anterior      NUMBER,
+    new_fecha_registro   DATE,
+    new_producto_id   NUMBER
+    ) AS
+begin
+    update Registro set registro_id = new_registro_id, monto_anterior = new_monto_anterior, fecha_registro = new_fecha_registro, producto_id = new_producto_id;
+end;
+/
+
+create or replace procedure registro_delete(
+    new_registro_id NUMBER
+    ) AS
+begin
+    delete from Registro where registro_id = new_registro_id;
+end;
+/
+
 
 
 
