@@ -27,7 +27,8 @@ new_cliente_id   NUMBER
 ) AS
 
 begin
-    update Orden set orden_id = new_orden_id, monto_total = new_monto_total, estado = new_estado, fecha_orden = new_fecha_orden, cliente_id = new_cliente_id;
+    update Orden set monto_total = new_monto_total, estado = new_estado, fecha_orden = new_fecha_orden, cliente_id = new_cliente_id
+    where orden_id = new_orden_id;
 end;
 /
 
@@ -114,7 +115,8 @@ create or replace procedure producto_update (
     ) AS
 
 begin
-    update Producto set producto_id = new_producto_id, nombre_producto  = new_nombre_producto, descripcion = new_descripcion, precio_unitario = new_precio_unitario, categoria_id = new_categoria_id, pyme_id = new_pyme_id;
+    update Producto set nombre_producto  = new_nombre_producto, descripcion = new_descripcion, precio_unitario = new_precio_unitario, categoria_id = new_categoria_id, pyme_id = new_pyme_id
+    where producto_id = new_producto_id;
 end;
 /
 
@@ -187,7 +189,8 @@ create or replace procedure categoria_update   (
     new_nombre_categoria      VARCHAR2
     ) AS
 begin
-    update Categoria set categoria_id = new_categoria_id, nombre_categoria = new_nombre_categoria;
+    update Categoria set nombre_categoria = new_nombre_categoria
+    where categoria_id = new_categoria_id;
 end;
 /
 
@@ -222,7 +225,8 @@ create or replace procedure linea_de_producto_update (
     ) AS
     
 begin
-    update Linea_de_producto set linea_id = new_linea_id, cantidad = new_cantidad, monto = new_monto, orden_id = new_orden_id, producto_id = new_producto_id;
+    update Linea_de_producto set cantidad = new_cantidad, monto = new_monto, orden_id = new_orden_id, producto_id = new_producto_id
+    where linea_id = new_linea_id;
 end;
 /
 
@@ -254,7 +258,8 @@ create or replace procedure registro_update (
     new_producto_id   NUMBER
     ) AS
 begin
-    update Registro set registro_id = new_registro_id, monto_anterior = new_monto_anterior, fecha_registro = new_fecha_registro, producto_id = new_producto_id;
+    update Registro set monto_anterior = new_monto_anterior, fecha_registro = new_fecha_registro, producto_id = new_producto_id
+    where registro_id = new_registro_id;
 end;
 /
 
