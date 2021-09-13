@@ -120,6 +120,17 @@ begin
 end;
 /
 
+create or replace procedure producto_update_precio (
+    new_producto_id NUMBER,
+    new_precio_unitario   NUMBER
+    ) AS
+
+begin
+    update Producto set precio_unitario = new_precio_unitario
+    where producto_id = new_producto_id;
+end;
+/
+
 create or replace procedure delete_producto (
     new_producto_id NUMBER
     ) AS
