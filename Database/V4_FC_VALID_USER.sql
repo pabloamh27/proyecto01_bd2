@@ -66,4 +66,6 @@ begin
         END IF;
     end if;
 end;
+/
 
+commit;

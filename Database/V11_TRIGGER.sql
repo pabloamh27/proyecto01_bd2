@@ -7,7 +7,7 @@ DECLARE
 BEGIN
    insert into Registro( monto_anterior, fecha_registro, producto_id) values (:old.precio_unitario, CURRENT_DATE, :old.producto_id);
 END;
-
+/
   
   
 --Pruebas del trigger    
@@ -22,3 +22,5 @@ END;
 --    precio_unitario = 5500
 --WHERE
 --    producto_id = 5;
+
+commit;

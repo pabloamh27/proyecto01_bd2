@@ -19,4 +19,7 @@ begin
 
     END IF;
 end;
+/
+
+commit;
 

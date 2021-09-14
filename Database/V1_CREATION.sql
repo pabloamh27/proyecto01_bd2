@@ -91,6 +91,7 @@ CREATE TABLE Linea_de_producto (
         REFERENCES Producto (producto_id)
 );
 
+commit;
 
 
 

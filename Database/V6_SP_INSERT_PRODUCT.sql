@@ -11,3 +11,6 @@ begin
     end if;
     insert into Producto (nombre_producto, descripcion, precio_unitario, categoria_id, pyme_id) values(l_name, l_descripcion, precio, cat_id, pyme);
 end;
+/
+
+commit;

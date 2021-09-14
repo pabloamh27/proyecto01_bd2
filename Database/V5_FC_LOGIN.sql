@@ -31,3 +31,6 @@ begin
     END IF;
     return 0;
 end;
+/
+
+commit;

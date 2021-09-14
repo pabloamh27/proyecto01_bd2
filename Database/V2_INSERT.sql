@@ -40,3 +40,4 @@ insert into Registro( monto_anterior, fecha_registro, producto_id) values (15000
 insert into Registro( monto_anterior, fecha_registro, producto_id) values (10000, '07-JUL-2010', 4);
 insert into Registro( monto_anterior, fecha_registro, producto_id) values (40000, '01-FEB-2020', 5);
 
+commit;

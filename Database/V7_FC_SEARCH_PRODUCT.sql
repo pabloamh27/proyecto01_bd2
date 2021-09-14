@@ -16,4 +16,6 @@ BEGIN
     end if;
     return 0;
 END;
+/
 
+commit;
