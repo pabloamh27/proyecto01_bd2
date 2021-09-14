@@ -8,11 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.*;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Types;
 
 
-@WebServlet("/login_pyme")
-public class login_pyme extends HttpServlet {
+@WebServlet("/editar_producto")
+public class editar_producto extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
 
@@ -26,17 +29,15 @@ public class login_pyme extends HttpServlet {
         try {
             Connection con = dbtest.getConnection();
             String identificador = request.getParameter("identificador");
-            String clave = request.getParameter("clave");
+            String contraseña = request.getParameter("contraseña");
 
 
-
-            String query = "{? = call FC_PYME_LOGIN(?,?)}";
+            String query = "{call SP_EDIT_PRODUCT(?,?)}";
             CallableStatement cstmt = con.prepareCall(query);
-            cstmt.registerOutParameter(1,Types.INTEGER);
             cstmt.setString(2,identificador);
-            cstmt.setString(3,clave);
+            cstmt.setString(3,contraseña);
             cstmt.executeQuery();
-            ResultSet rs = (ResultSet) cstmt.getObject(1);
+
 
 
 

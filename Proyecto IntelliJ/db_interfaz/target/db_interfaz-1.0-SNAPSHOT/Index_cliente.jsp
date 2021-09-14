@@ -63,10 +63,10 @@
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="150" data-image-height="97" id="sec-09a7">
       <div class="u-align-center u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Bienvenido al Hub de Cliente</h2>
-        <a href="Crear-Orden.html" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">Crear Orden</a>
+        <a href="Crear-Orden.jsp" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">Crear Orden</a>
         <a href="#" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">Cancelar orden</a>
-        <a href="Consultar_Ordenes.html" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">Consultar Ordenes</a>
-        <a href="Seleccionar-Producto.html" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4">Buscar producto</a>
+        <a href="Consultar_Ordenes.jsp" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">Consultar Ordenes</a>
+        <a href="Seleccionar-Producto.jsp" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4">Buscar producto</a>
       </div>
     </section>
     

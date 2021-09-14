@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -36,7 +37,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.jsp">Home</a>
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
@@ -47,7 +48,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.jsp">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
@@ -63,7 +64,7 @@
       <div class="u-align-center u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Registra tu producto</h2>
         <div class="u-form u-form-1">
-          <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+          <form action="añadir_producto" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
               <label for="name-707b" class="u-form-control-hidden u-label"></label>
               <input type="text" placeholder="Ingrese el nombre del producto" id="name-707b" name="nombre_producto" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
@@ -78,7 +79,7 @@
             </div>
             <div class="u-form-group u-form-group-4">
               <label for="text-4086" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Ingrese la categoria del producto" id="text-4086" name="categoria_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+              <input type="text" placeholder="Ingrese la categoria del producto" id="text-4086" name="categoria" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Registrar Producto<br>

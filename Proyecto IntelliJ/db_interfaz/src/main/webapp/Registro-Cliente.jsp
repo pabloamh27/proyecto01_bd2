@@ -64,7 +64,7 @@
       <div class="u-align-center u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Registrate como CLIENTE!</h2>
         <div class="u-form u-form-1">
-          <form action="registro_cliente" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+          <form action="registro_cliente" method="Post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
               <label for="name-707b" class="u-form-control-hidden u-label"></label>
               <input type="text" placeholder="Ingrese su cédula" id="name-707b" name="cedula" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">

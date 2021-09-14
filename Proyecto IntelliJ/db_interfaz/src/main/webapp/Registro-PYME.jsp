@@ -64,10 +64,10 @@
       <div class="u-align-center u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Registrate como PYME!</h2>
         <div class="u-form u-form-1">
-          <form action="registro_pyme" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+          <form action="register_PYME" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
               <label for="name-707b" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Ingrese su cedula juridica" id="name-707b" name="cedula_juridica" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Ingrese su cedula juridica" id="name-707b" name="cedula_juridica" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-group">
               <label for="email-707b" class="u-form-control-hidden u-label"></label>
@@ -75,7 +75,7 @@
             </div>
             <div class="u-form-group">
               <label for="message-707b" class="u-form-control-hidden u-label"></label>
-              <input placeholder="Ingrese su email" rows="4" cols="50" id="message-707b" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required" type="text">
+                <input type="text" placeholder="Ingrese su email" id="message-707b" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-group u-form-group-4">
               <label for="text-4086" class="u-form-control-hidden u-label"></label>
@@ -90,7 +90,7 @@
               <input type="text" placeholder="Ingrese su provincia" id="text-c45a" name="provincia_pyme" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Registrarse<br>
+              <a href="register_PYME" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Registrarse<br>
               </a>
               <input type="submit" value="submit" class="u-form-control-hidden">
             </div>

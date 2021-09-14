@@ -37,22 +37,22 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.jsp">Login PYME</a>
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.html">Registro PYME</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.html">Registro Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.html">Login Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.html">Login PYME</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.jsp">Login PYME</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.html">Registro PYME</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.html">Registro Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.html">Login Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.html">Login PYME</a>
 </li></ul>
               </div>
             </div>
@@ -64,30 +64,22 @@
       <div class="u-align-center u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Editar el producto</h2>
         <div class="u-form u-form-1">
-          <form action="editar_producto" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+          <form action="editar" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+            <div class="u-form-group u-form-group-1">
+              <label for="text-9c86" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="Ingrese el nombre del producto a editar" id="text-9c86" name="nombre_producto" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+            </div>
             <div class="u-form-group u-form-name">
               <label for="name-707b" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Ingrese el nuevo nombre" id="name-707b" name="nombre_producto" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Ingrese el nuevo nombre" id="name-707b" name="nuevo_nombre_producto" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
             </div>
             <div class="u-form-group">
               <label for="email-707b" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Ingrese la nueva descripcion" id="email-707b" name="descripcion" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+              <input type="text" placeholder="Ingrese la nueva descripcion" id="email-707b" name="descripcion" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
             </div>
             <div class="u-form-group">
               <label for="message-707b" class="u-form-control-hidden u-label"></label>
-              <input placeholder="Ingrese el nuevo precio" rows="4" cols="50" id="message-707b" name="precio_unitario" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required" type="text">
-            </div>
-            <div class="u-form-checkbox u-form-group u-form-group-4">
-              <input type="checkbox" id="checkbox-3401" name="cambiar_nombre_producto" value="On">
-              <label for="checkbox-3401" class="u-label">Cambiar nombre</label>
-            </div>
-            <div class="u-form-checkbox u-form-group u-form-group-5">
-              <input type="checkbox" id="checkbox-bde7" name="cambiar_descripcion_producto" value="On">
-              <label for="checkbox-bde7" class="u-label">Cambiar descripción</label>
-            </div>
-            <div class="u-form-checkbox u-form-group u-form-group-6">
-              <input type="checkbox" id="checkbox-dfe5" name="cambiar_precio_producto" value="On">
-              <label for="checkbox-dfe5" class="u-label">Cambiar precio&nbsp;</label>
+              <input placeholder="Ingrese el nuevo precio" rows="4" cols="50" id="message-707b" name="precio_unitario" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" type="text">
             </div>
             <div class="u-align-left u-form-group u-form-submit">
               <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Editar<br>
@@ -95,7 +87,7 @@
               <input type="submit" value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Producto Editado con exito! </div>
+            <div class="u-form-send-error u-form-send-message"> Editado con exito! </div>
             <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>

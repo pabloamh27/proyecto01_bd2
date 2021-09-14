@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Types;
 
 
 @WebServlet("/login_cliente")
@@ -18,7 +19,7 @@ public class login_cliente extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
 
-    protected void doGet(HttpServletRequest request,
+    protected void doPost(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
 
         DBproperties dbtest = new DBproperties("jdbc:oracle:thin:@localhost:1521:proyecto01db", "system",
@@ -31,13 +32,14 @@ public class login_cliente extends HttpServlet {
             String contraseña = request.getParameter("contraseña");
 
 
-            response.setContentType("text/html");
 
-            String query = "{exec FC_CLIENTE_LOGIN (?,?)}";
+            String query = "{? = call FC_CLIENTE_LOGIN(?,?)}";
             CallableStatement cstmt = con.prepareCall(query);
-            cstmt.setString(1,identificador);
-            cstmt.setString(2, contraseña);
-            cstmt.execute();
+            cstmt.registerOutParameter(1, Types.INTEGER);
+            cstmt.setString(2,identificador);
+            cstmt.setString(3,contraseña);
+            cstmt.executeQuery();
+
 
 
 

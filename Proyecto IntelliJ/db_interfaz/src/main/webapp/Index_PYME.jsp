@@ -63,9 +63,9 @@
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="150" data-image-height="97" id="sec-09a7">
       <div class="u-align-center u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Bienvenido al Hub de PYME</h2>
-        <a href="Añadir_producto.html" data-page-id="889515413" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">Añadir Producto</a>
+        <a href="Añadir_producto.jsp" data-page-id="889515413" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">Añadir Producto</a>
         <a href="Editar_producto.jsp" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">Editar producto</a>
-        <a href="Consultar-Ventas.html" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">Consultar ventas</a>
+        <a href="Consultar-Ventas.jsp" data-page-id="94829576" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">Consultar ventas</a>
       </div>
     </section>
     

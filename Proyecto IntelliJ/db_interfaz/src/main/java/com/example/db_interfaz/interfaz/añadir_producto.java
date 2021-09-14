@@ -8,11 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.*;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 
-@WebServlet("/login_pyme")
-public class login_pyme extends HttpServlet {
+@WebServlet("/añadir_producto")
+public class añadir_producto extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
 
@@ -25,18 +27,20 @@ public class login_pyme extends HttpServlet {
 
         try {
             Connection con = dbtest.getConnection();
-            String identificador = request.getParameter("identificador");
-            String clave = request.getParameter("clave");
+            String nombre_producto = request.getParameter("nombre_producto");
+            String descripcion = request.getParameter("descripcion");
+            String precio_unitario = request.getParameter("precio_unitario");
+            String categoria = request.getParameter("categoria");
 
-
-
-            String query = "{? = call FC_PYME_LOGIN(?,?)}";
+            String query = "{call SP_INSERT_PRODUCT (?,?,?,?,?)}";
             CallableStatement cstmt = con.prepareCall(query);
-            cstmt.registerOutParameter(1,Types.INTEGER);
-            cstmt.setString(2,identificador);
-            cstmt.setString(3,clave);
+            cstmt.setString(1, nombre_producto);
+            cstmt.setString(2, descripcion);
+            cstmt.setString(3, precio_unitario);
+            cstmt.setString(4, categoria);
             cstmt.executeQuery();
-            ResultSet rs = (ResultSet) cstmt.getObject(1);
+
+
 
 
 

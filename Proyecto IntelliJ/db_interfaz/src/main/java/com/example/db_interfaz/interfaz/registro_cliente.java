@@ -36,19 +36,18 @@ public class registro_cliente extends HttpServlet {
             String contraseña = request.getParameter("contraseña");
             String provincia_cliente = request.getParameter("provincia_cliente");
 
-            response.setContentType("text/html");
 
-            String query = "{exec cliente_insert (?,?,?,?,?,?,?,?)}";
-            CallableStatement cstmt = con.prepareCall(query);
-            cstmt.setString(1,cedula);
-            cstmt.setString(2,nombre_cliente);
-            cstmt.setString(3,apellido1);
-            cstmt.setString(4,apellido2);
-            cstmt.setString(5,telefono_cliente);
-            cstmt.setString(6,contraseña);
-            cstmt.setString(7,apodo);
-            cstmt.setString(8, provincia_cliente);
-            cstmt.execute();
+            String query = "{call cliente_insert (?,?,?,?,?,?,?,?)}";
+            CallableStatement statement = con.prepareCall(query);
+            statement.setString(1,cedula);
+            statement.setString(2,nombre_cliente);
+            statement.setString(3,apellido1);
+            statement.setString(4,apellido2);
+            statement.setString(5,telefono_cliente);
+            statement.setString(6,contraseña);
+            statement.setString(7,apodo);
+            statement.setString(8,provincia_cliente);
+            statement.executeQuery();
 
 
 

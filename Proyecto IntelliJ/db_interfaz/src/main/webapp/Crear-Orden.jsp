@@ -4,12 +4,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="INTUITIVE">
+    <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Añadir_producto</title>
+    <title>Crear Orden</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Añadir_producto.css" media="screen">
+<link rel="stylesheet" href="Crear-Orden.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.25.0, nicepage.com">
@@ -22,7 +22,7 @@
 		"name": "Proyecto01"
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Añadir_producto">
+    <meta property="og:title" content="Crear Orden">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
@@ -59,10 +59,10 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-      </div></header>
-    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="150" data-image-height="97" id="sec-09a7">
+      </div></header> 
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="150" data-image-height="97" id="sec-ff91">
       <div class="u-align-center u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1">Registra tu producto</h2>
+        <h2 class="u-text u-text-default u-text-1">Añadir lineas de orden</h2>
         <div class="u-form u-form-1">
           <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
@@ -71,18 +71,10 @@
             </div>
             <div class="u-form-group">
               <label for="email-707b" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Ingrese la descripcion" id="email-707b" name="descripcion" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+              <input type="text" placeholder="Ingrese la cantidad" id="email-707b" name="cantidad" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
-            <div class="u-form-group">
-              <label for="message-707b" class="u-form-control-hidden u-label"></label>
-              <input placeholder="Ingrese el precio unitario del producto" rows="4" cols="50" id="message-707b" name="precio_unitario" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required" type="text">
-            </div>
-            <div class="u-form-group u-form-group-4">
-              <label for="text-4086" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Ingrese la categoria del producto" id="text-4086" name="categoria_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
-            </div>
-            <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Registrar Producto<br>
+            <div class="u-align-left u-form-group u-form-submit">
+              <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Añadir<br>
               </a>
               <input type="submit" value="submit" class="u-form-control-hidden">
             </div>
@@ -100,13 +92,13 @@
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
       <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Web Templates</span>
+        <span>Website Templates</span>
       </a>
       <p class="u-text">
         <span>created with</span>
       </p>
-      <a class="u-link" href="https://nicepage.com/website-builder" target="_blank">
-        <span>Website Builder</span>
+      <a class="u-link" href="https://nicepage.com/" target="_blank">
+        <span>Website Builder Software</span>
       </a>. 
     </section>
   </body>
