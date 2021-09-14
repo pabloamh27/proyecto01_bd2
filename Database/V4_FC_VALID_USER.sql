@@ -31,6 +31,7 @@ begin
         END IF;
     end if;
 end;
+/
 
 -- VALIDATION OF THE PYMES DATA
 create or replace FUNCTION FC_VALID_PYME (

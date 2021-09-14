@@ -14,7 +14,7 @@ begin
     END IF;
     return 0;
 end;
-
+/
 
 -- LOGIN DEL PYME 
 CREATE OR REPLACE FUNCTION FC_PYME_LOGIN(ident VARCHAR2, pass VARCHAR2) 
