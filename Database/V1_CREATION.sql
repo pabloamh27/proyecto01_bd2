@@ -82,7 +82,7 @@ CREATE TABLE Linea_de_producto (
     monto   NUMBER(10,2),
     orden_id   NUMBER,
     producto_id   NUMBER,
-    PRIMARY KEY ( orden_id ),
+    PRIMARY KEY ( linea_id ),
     CONSTRAINT fk_orden
         FOREIGN KEY (orden_id)
         REFERENCES Orden (orden_id),
@@ -91,7 +91,6 @@ CREATE TABLE Linea_de_producto (
         REFERENCES Producto (producto_id)
 );
 
-commit;
 
 
 
