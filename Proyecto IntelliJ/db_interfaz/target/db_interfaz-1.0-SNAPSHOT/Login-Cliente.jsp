@@ -40,7 +40,7 @@
             <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="login-cliente.jsp">Login Cliente</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.jsp">Login PYME</a>
 </li></ul>
           </div>
@@ -51,7 +51,7 @@
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="login-cliente.jsp">Login Cliente</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.jsp">Login PYME</a>
 </li></ul>
               </div>
@@ -64,7 +64,7 @@
       <div class="u-align-center u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Entrar al sistema</h2>
         <div class="u-form u-form-1">
-          <form action="login_cliente" method="GET" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+          <form action="login_cliente" method="get" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
               <label for="name-707b" class="u-form-control-hidden u-label"></label>
               <input type="text" placeholder="Ingrese su cédula/telefono/username" id="name-707b" name="identificador" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
@@ -74,12 +74,12 @@
               <input type="text" placeholder="Ingrese su contraseña" id="email-707b" name="contraseña" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="Index_cliente.jsp" onclick="location.href = 'Index_cliente.jsp';" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Login<br>
+              <a href="index_cliente.jsp" onclick="location.href = 'index_cliente.jsp';" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-11">Login<br>
               </a>
               <input type="submit" value="submit" class="u-form-control-hidden">
             </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Login exitoso. </div>
+              <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+              <div class="u-form-send-error u-form-send-message"> Login exitoso. </div>
             <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>

@@ -9,7 +9,7 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Index_cliente</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Index_cliente.css" media="screen">
+<link rel="stylesheet" href="index_cliente.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.25.0, nicepage.com">
@@ -40,7 +40,7 @@
             <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="login-cliente.jsp">Login Cliente</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.jsp">Login PYME</a>
 </li></ul>
           </div>
@@ -51,7 +51,7 @@
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Index.jsp">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-PYME.jsp">Registro PYME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Registro-Cliente.jsp">Registro Cliente</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-Cliente.jsp">Login Cliente</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="login-cliente.jsp">Login Cliente</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login-PYME.jsp">Login PYME</a>
 </li></ul>
               </div>
